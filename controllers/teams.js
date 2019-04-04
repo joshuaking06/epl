@@ -3,8 +3,6 @@ const express = require('express')
 const rp = require('request-promise')
 const app = express()
 
-const key = process.env.EPL_KEY
-
 function indexRoute(req, res) {
 	console.log(process.env.EPL_KEY)
 	rp({
