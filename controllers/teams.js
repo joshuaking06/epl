@@ -1,7 +1,5 @@
 require('dotenv').config()
-const express = require('express')
 const rp = require('request-promise')
-const app = express()
 
 function indexRoute(req, res) {
 	console.log(process.env.EPL_KEY)
