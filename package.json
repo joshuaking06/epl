@@ -6,6 +6,7 @@
 	"author": "joshuaking06 <joshua.king0692@gmail.com>",
 	"license": "MIT",
 	"scripts": {
+		"start": "node index",
 		"serve": "webpack-dev-server",
 		"build": "webpack -p"
 	},
