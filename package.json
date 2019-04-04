@@ -6,7 +6,7 @@
 	"author": "joshuaking06 <joshua.king0692@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"serve:react": "webpack-dev-server",
+		"serve": "webpack-dev-server",
 		"build": "webpack -p"
 	},
 	"dependencies": {
