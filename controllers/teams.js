@@ -9,12 +9,14 @@ function indexRoute(req, res) {
 	console.log(process.env.EPL_KEY)
 	rp({
 		method: 'GET',
-		url:
-			'http://api.football-api.com/2.0/standings/1204?Authorization=565ec012251f932ea4000001fa542ae9d994470e73fdb314a8a56d76',
+		url: process.env.EPL_URL,
 		json: true
 	})
 		.then((response) => {
-			return res.json(response)
+			const sorted = response.sort(function(teamA, teamB) {
+				return teamB.points - teamA.points
+			})
+			return res.json(sorted)
 		})
 		.catch((err) => console.log(err))
 }
